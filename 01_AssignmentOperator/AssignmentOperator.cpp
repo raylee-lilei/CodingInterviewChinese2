@@ -8,12 +8,12 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 *******************************************************************/
 
 //==================================================================
-// ¡¶½£Ö¸Offer¡ª¡ªÃûÆóÃæÊÔ¹Ù¾«½²µäĞÍ±à³ÌÌâ¡·´úÂë
-// ×÷Õß£ººÎº£ÌÎ
+// ã€Šå‰‘æŒ‡Offerâ€”â€”åä¼é¢è¯•å®˜ç²¾è®²å…¸å‹ç¼–ç¨‹é¢˜ã€‹ä»£ç 
+// ä½œè€…ï¼šä½•æµ·æ¶›
 //==================================================================
 
-// ÃæÊÔÌâ1£º¸³ÖµÔËËã·ûº¯Êı
-// ÌâÄ¿£ºÈçÏÂÎªÀàĞÍCMyStringµÄÉùÃ÷£¬ÇëÎª¸ÃÀàĞÍÌí¼Ó¸³ÖµÔËËã·ûº¯Êı¡£
+// é¢è¯•é¢˜1ï¼šèµ‹å€¼è¿ç®—ç¬¦å‡½æ•°
+// é¢˜ç›®ï¼šå¦‚ä¸‹ä¸ºç±»å‹CMyStringçš„å£°æ˜ï¼Œè¯·ä¸ºè¯¥ç±»å‹æ·»åŠ èµ‹å€¼è¿ç®—ç¬¦å‡½æ•°ã€‚
 
 #include<cstring>
 #include<cstdio>
@@ -74,7 +74,24 @@ CMyString& CMyString::operator = (const CMyString& str)
     return *this;
 }
 
-// ====================²âÊÔ´úÂë====================
+/*
+CMystring& CMystring::operator=(const CMystring &str){
+    if(this != &str){
+        CMystring strTemp(str);
+        
+        //ä¸´æ—¶å®ä¾‹å’Œè‡ªèº«å®ä¾‹è¿›è¡Œäº¤æ¢
+        char* pTemp = strTemp.m_pData;
+        strTemp.m_pData = m_pData;
+        m_pData = pTemp;
+    }
+    return *this;
+}
+
+
+
+*/
+
+// ====================æµ‹è¯•ä»£ç ====================
 void CMyString::Print()
 {
     printf("%s", m_pData);
@@ -97,7 +114,7 @@ void Test1()
     printf(".\n");
 }
 
-// ¸³Öµ¸ø×Ô¼º
+// èµ‹å€¼ç»™è‡ªå·±
 void Test2()
 {
     printf("Test2 begins:\n");
@@ -114,7 +131,7 @@ void Test2()
     printf(".\n");
 }
 
-// Á¬Ğø¸³Öµ
+// è¿ç»­èµ‹å€¼
 void Test3()
 {
     printf("Test3 begins:\n");
